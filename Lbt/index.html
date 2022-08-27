@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		a {
+			display: inline-block;
+			color: black;
+			text-decoration: none;
+		}
+
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			color: #666;
+		}
+
+		ul,
+		li,
+		ol {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		img {
+			display: block;
+		}
+
+		/* 新品推荐部分  */
+		#new_products {
+			width: 100%;
+			/* 新品推荐部分标题 */
+			/* 新品推荐商品部分 */
+		}
+
+		#new_products .command-title {
+			width: 100%;
+			margin: 66px 0 30px 0;
+		}
+
+		#new_products .command-title .title {
+			font-size: 42px;
+			font-weight: 600;
+			color: #333;
+			text-align: center;
+		}
+
+		#new_products .command-title .tabs {
+			margin: 25px auto 40px;
+			text-align: center;
+		}
+
+		#new_products .command-title .tabs a {
+			color: #333;
+			padding: 0 10px;
+			font-size: 16px;
+		}
+
+		#new_products .command-title .tabs a .active {
+			text-decoration: underline;
+		}
+
+		#new_products .new_products_shop {
+			width: 990px;
+			height: 451px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		#new_products .new_products_shop .news_wrap {
+			width: 990px;
+			height: 450px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap {
+			width: 500%;
+			position: absolute;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap li {
+			width: 242.5px;
+			display: inline-block;
+			box-sizing: border-box;
+			padding: 10px;
+			font-size: 12px;
+			color: #333;
+			text-align: center;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap li a img {
+			width: 210px;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap li .pirce_news {
+			font-size: 18px;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap li:hover {
+			background-color: #ccc;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap .img_basto {
+			width: 54px;
+			height: 24px;
+			margin: 20px auto;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap .title {
+			margin: 20px auto;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_wrap .pirce_news {
+			font-size: 16px;
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_left_button {
+			font-size: 40px;
+			color: gray;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -50px;
+			cursor: pointer;
+		}
+
+		#new_products .new_products_shop .news_wrap span:hover {
+			transform: scale(1.5);
+		}
+
+		#new_products .new_products_shop .news_wrap .shop_right_button {
+			font-size: 40px;
+			color: gray;
+			position: absolute;
+			top: 50%;
+			right: 0px;
+			margin-top: -50px;
+			cursor: pointer;
+		}
+
+		#new_products .new_products_shop .news_wrap1 {
+			width: 990px;
+			height: 450px;
+			position: relative;
+			overflow: hidden;
+			display: none;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap {
+			width: 500%;
+			overflow: hidden;
+			position: absolute;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap li {
+			width: 247.5px;
+			display: inline-block;
+			box-sizing: border-box;
+			padding: 10px;
+			font-size: 12px;
+			color: #333;
+			text-align: center;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap li a img {
+			width: 210px;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap li .pirce_news {
+			font-size: 18px;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap li:hover {
+			background-color: #ccc;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap .img_basto {
+			width: 54px;
+			height: 24px;
+			margin: 20px auto;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap .title {
+			margin: 20px auto;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_wrap .pirce_news {
+			font-size: 16px;
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_le_button {
+			font-size: 40px;
+			color: gray;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -50px;
+			cursor: pointer;
+		}
+
+		#new_products .new_products_shop .news_wrap1 span:hover {
+			transform: scale(1.5);
+		}
+
+		#new_products .new_products_shop .news_wrap1 .shop_rig_button {
+			font-size: 40px;
+			color: gray;
+			position: absolute;
+			top: 50%;
+			right: 0px;
+			margin-top: -50px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- 新品推荐部分 -->
+	<div id="new_products">
+		<!-- 新品推荐标题 -->
+		<div class="command-title">
+			<div class="title">相似推荐</div>
+		</div>
+		<!-- 新品推荐商品部分 -->
+		<div class="new_products_shop">
+			<!-- 显示商品部分 -->
+			<div class="news_wrap">
+				<ul class="shop_wrap">
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe1.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/blackL-belle.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥609</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe2.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/blackL-belle.png" alt="">
+						<div class="title">帅气 长靴</div>
+						<div class="pirce_news">￥579</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe3.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe4.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe5.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe6.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe7.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe8.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe9.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">通勤斜挎包</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe10.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">性感纯凉鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./img/shoe11.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+				</ul>
+				<span class="shop_left_button">&lt;</span>
+				<span class="shop_right_button">&gt;</span>
+			</div>
+			<!-- 隐藏商品部分 -->
+			<div class="news_wrap1">
+				<ul class="shop_wrap">
+					<li><a href="javascript:;">
+							<img src="./img/shoe15.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe13.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe7.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">休闲 满帮鞋</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe8.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe9.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">通勤斜挎包</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe12.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/blackL-belle.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥609</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe13.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/blackL-belle.png" alt="">
+						<div class="title">帅气 长靴</div>
+						<div class="pirce_news">￥579</div>
+					</li>
+					<li><a href="javascript:;">
+							<img src="./img/shoe14.jpg" alt="">
+						</a>
+						<img class="img_basto" src="./img/basto.png" alt="">
+						<div class="title">韩版 短靴</div>
+						<div class="pirce_news">￥585</div>
+					</li>
+				</ul>
+				<!-- 添加左右按钮点击事件 -->
+				<span class="shop_le_button">&lt;</span>
+				<span class="shop_rig_button">&gt;</span>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+
+	<script src="./js/jquery-1.12.4.js"></script>
+	<script>
+		//轮播图外部引用
+		// 新品推荐部分
+		// 新品推荐商品部分  
+		$(function () {
+			// 获取元素
+			// 男女鞋按钮
+			var $shoe = $('#new_products .command-title .tabs .shoe');
+			// 运动按钮
+			var $active = $('#new_products .command-title .tabs .active');
+			// 男女鞋商品显示部分盒子
+			var $news_wrap = $('#new_products .new_products_shop .news_wrap');
+			// console.log($news_wrap);
+			//运动商品部分隐藏部分盒子
+			var $news_wrap1 = $('#new_products .new_products_shop .news_wrap1');
+			// console.log($news_wrap1);
+
+			// 获取显示
+			// 上一个按钮
+			var $prev = $('#new_products .new_products_shop .news_wrap .shop_left_button');
+			// console.log($prev1);
+			//下一个按钮
+			var $next = $('#new_products .new_products_shop .news_wrap .shop_right_button');
+			// 获取隐藏
+			// 上一个按钮
+			var $prev1 = $('#new_products .new_products_shop .news_wrap1 .shop_le_button');
+			// console.log($prev1);
+			//下一个按钮
+			var $next1 = $('#new_products .new_products_shop .news_wrap1 .shop_rig_button');
+			// 获取显示ul
+			var $ul = $('#new_products .new_products_shop .news_wrap ul')
+			// 获取隐藏ul
+			var $ul1 = $('#new_products .new_products_shop .news_wrap1 ul')
+			// 获取li
+			var $ul_li = $('#new_products .new_products_shop .news_wrap ul li');
+			var $ul1_li = $('#new_products .new_products_shop .news_wrap1 ul li');
+			// li 的数量
+			var num = $ul_li.length
+			// console.log(num / 4)
+			var num1 = $ul1_li.length
+			// console.log(num1 / 4)
+			// 下标
+			var timer = 0;
+			var timer1 = 0
+			// console.log(timer1);
+			// 显示商品  
+			$shoe.click(function () {
+				$news_wrap.css({
+					'display': 'block',
+				})
+				$news_wrap1.css({
+					'display': 'none',
+				})
+			})
+			// 隐藏部分
+			$active.click(function () {
+				$news_wrap1.css({
+					'display': 'block',
+				})
+				$news_wrap.css({
+					'display': 'none',
+				})
+			})
+
+			// 显示部分点击轮播
+			$next.click(function () {
+				timer++;
+				// console.log(timer);
+				$ul.animate({
+					left: '-=990px',
+				}, 1000)
+				if (timer < num / 4 - 1) {
+					$next.on('click');
+				} else {
+					$next.off("click",);
+				}
+				console.log(timer)
+			})
+
+			$prev.click(function () {
+				timer--;
+				$ul.animate({
+					left: "+=990px",
+				}, 1000)
+				if (timer > 0) {
+					$prev.on('click');
+				} else if (timer <= 0) {
+					$prev.off('click');
+				}
+				// console.log(timer) 
+			})
+			// 隐藏部分点击轮播
+			$next1.click(function () {
+				timer1++;
+				// console.log(timer);
+				$ul1.animate({
+					left: '-=990px',
+				}, 1000)
+				if (timer1 < num1 / 4 - 1) {
+					$next1.on('click');
+				} else {
+					$next1.off("click",);
+				}
+				// console.log(timer1)
+			})
+
+			$prev1.click(function () {
+				timer1--;
+				$ul1.animate({
+					left: "+=990px",
+				}, 1000)
+				if (timer1 > 0) {
+					$prev1.on('click');
+				} else if (timer1 <= 0) {
+					$prev1.off('click');
+				}
+				// console.log(timer) 
+			})
+		})
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+@import'./public';
+
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+
+    // 商品图、加购
+    .goodDetail {
+        width: 1190px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        // 商品图
+        .goodBlank {
+            width: 605px;
+            height: 605px;
+            position: relative;
+            float: left;
+
+            // 商品侧边小图
+            .goodSmallImg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 78px;
+
+                .list_h {
+                    .list_pic {
+                        width: 75px;
+                        padding-top: 5px;
+                        position: relative;
+
+                        .small_pic {
+                            padding: 2px;
+                            border: 1px solid #ddd;
+                            width: 66px;
+                            height: 66px;
+                        }
+
+                        // 小三角
+                        .icon1 {
+                            display: none;
+                            width: 6px;
+                            height: 10px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -212px -124px;
+                            position: absolute;
+                            top: 33px;
+                            left: 66px;
+                        }
+                    }
+
+                    .list_pic:hover .small_pic {
+                        border: 1px solid #333;
+                    }
+
+                    .list_pic:hover .icon1 {
+                        display: block;
+                    }
+                }
+            }
+
+            // 商品主图
+            .goodBigImg {
+                width: 482px;
+                height: 438px;
+                position: relative;
+                left: 114px;
+                padding-bottom: 41px;
+
+                .float_layer {
+                    width: 220px;
+                    height: 210px;
+                    border: 1px solid #000;
+                    background: #666;
+                    filter: alpha(opacity=30);
+                    opacity: 0.3;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    display: none;
+                    // display: block;
+                }
+
+                .mark {
+                    // display: none;
+                    // display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 100;
+                    left: 0px;
+                    top: 0px;
+                    background: red;
+                    filter: alpha(opacity=0);
+                    opacity: 0;
+                }
+
+                .goodPic {
+                    width: 485px;
+                    height: 485px;
+                    position: relative;
+                    padding: 0;
+
+                    img {
+                        width: 480px;
+                        height: 480px;
+                        aspect-ratio: auto 480 / 480;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+
+                .bigShow {
+
+
+                    .show_pic {
+                        width: 470px;
+                        height: 440px;
+                        overflow: hidden;
+                        position: relative;
+                        z-index: 1000;
+                        top: -485px;
+                        left: 485px;
+                        display: none;
+                        border: 1px solid #666;
+
+                        // display: block;
+                        img {
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 商品信息
+        .goodInfo {
+            width: 528px;
+            float: left;
+            padding-left: 57px;
+            color: #333;
+            font-family: 'Microsoft YaHei';
+            font-size: 12px;
+
+            // 商品logo
+            .goodLogo {
+                width: 142px;
+                height: 72px;
+                line-height: 72px;
+                border: 1px solid #f6f6f6;
+                text-align: center;
+            }
+
+            // 商品售卖标题
+            .goodTitle {
+                font-size: 16px;
+                margin-top: 25px;
+                font-weight: normal;
+            }
+
+            // 商品价格
+            .goodPrice {
+                margin-top: 40px;
+                font-family: 'Microsoft YaHei';
+                padding: 4px 0 20px;
+
+                #icon2 {
+                    font-size: 14px;
+                }
+
+                // 当前价
+                .price_cur {
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: bold;
+                }
+
+                // 删掉的价格
+                .price_past {
+                    text-decoration: line-through;
+                }
+
+                // 价格描述
+                .price-des {
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+
+            // 商品促销活动
+            .goodSale {
+
+                .clock,
+                .gift {
+                    float: left;
+                    background: #333;
+                    color: #fff;
+                    min-width: 50px;
+                    text-align: center;
+                    height: 16px;
+                    font: 12px/16px '';
+                    margin: 0 12px 0 0;
+                    padding: 0 5px;
+                    overflow: hidden;
+                }
+
+                // 促销活动倒计时
+                .clock {
+                    min-width: 70px;
+                    margin-top: -0px;
+                    background: url(https://pcs1.ygimg.cn/template/common/images/new_dpico.png) 0 -113px no-repeat;
+                    padding-left: 19px;
+                    background-position: 0 -237px;
+                }
+
+                // 促销信息1
+                .sale1 {
+                    padding-top: 2px;
+                    width: 528px;
+                    height: 24px;
+                }
+
+                // 促销信息2
+                .sale2 {
+                    position: relative;
+                    height: 22px;
+                    width: 528px;
+
+                    // 促销商品列表下拉框
+                    .icon4 {
+                        font-style: normal;
+                        background: url(https://s1.ygimg.cn/template/common/images/icons_goods.png?4217464af881296caac2fc8666b2fecf) no-repeat 5px -263px;
+                        width: 16px;
+                        height: 16px;
+                        line-height: 16px;
+                        position: absolute;
+                        display: block;
+                        right: 290px;
+                    }
+                }
+
+            }
+
+            // 分界线
+            .summary_line {
+                margin-top: 40px;
+                height: 0;
+                overflow: hidden;
+                border-bottom: 1px dotted #a7a7a7;
+                margin-bottom: 15px;
+            }
+
+            // 商品颜色选择
+            .goodColor {
+                margin-top: 20px;
+                height: 49px;
+
+                // 颜色：
+                .color_name {
+                    clear: both;
+                    overflow: hidden;
+                    display: inline;
+                    float: left;
+                }
+
+                // 颜色图选择
+                .color_select {
+                    display: inline;
+                    width: 400px;
+                    margin-left: 2px;
+                    float: left;
+
+                    // 选择链接
+                    .select1 {
+                        position: relative;
+                        border: 1px solid #333;
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 5px;
+                        padding: 1px;
+                        margin-left: 8px;
+                        border: 1px solid #ddd;
+                        text-decoration: none;
+
+                        // 商品缩略图（供选择）
+                        .icon5 {
+                            width: 14px;
+                            height: 14px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -46px;
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 20;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+
+            // 商品尺寸
+            .goodSize {
+                margin-top: 35px;
+                width: 528px;
+                height: 60px;
+
+                // 尺码
+                .size {
+                    vertical-align: top;
+                    float: left;
+                }
+
+                .size_num {
+                    width: 320px;
+                    margin-left: 10px;
+                    float: left;
+
+                    // 尺寸选择
+                    .select {
+                        text-decoration: none;
+                        color: #666;
+                        border: 1px solid #ccc;
+                        min-width: 40px;
+                        width: 40px;
+                        overflow: visible;
+                        height: 20px;
+                        line-height: 20px;
+                        padding: 0 4px 0 4px;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        background: #fff;
+                        margin-right: 8px;
+                        text-align: center;
+                        cursor: pointer;
+                        position: relative;
+
+                        // .selection {
+                        //     width: 14px;
+                        //     height: 14px;
+                        //     background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -46px;
+                        //     bottom: 0;
+                        //     right: 0;
+                        //     overflow: hidden;
+                        //     position: absolute;
+                        //     text-indent: -9999em;
+                        //     display: none;
+                        // }
+
+                    }
+
+                    .selected {
+                        // background-color: blue;
+                        border: 1px solid #333;
+
+                        // display: block;
+                        .selection {
+                            width: 14px;
+                            height: 14px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -177px -46px;
+                            bottom: 0;
+                            right: 0;
+                            overflow: hidden;
+                            position: absolute;
+                            text-indent: -9999em;
+                            display: block;
+                        }
+                    }
+
+                    // .select:hover{
+                    //     border: 1px solid #666;
+                    // }
+                    // .select:hover .selection{
+                    //     display: block;
+                    // }
+                    // .select:checked .selection{
+                    //     display: block;
+
+                    // }
+                }
+
+                // 查看尺码表
+                .size_view_table {
+                    float: left;
+                    cursor: pointer;
+                    margin-left: 50px;
+
+                    #compare_size_link {
+                        text-decoration: none;
+                        border-color: #ddd;
+
+                        // 尺子图标
+                        .icon6 {
+                            font-style: normal;
+                            width: 12px;
+                            height: 12px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -46px -174px;
+                            padding-right: 15px;
+                        }
+                    }
+                }
+            }
+
+            // 购买数量
+            .goodNum {
+                zoom: 1;
+                margin-top: 25px;
+                height: 37px;
+
+                .num_name {
+                    float: left;
+                    height: 30px;
+                    line-height: 30px;
+                    margin-right: 10px;
+                }
+
+                .inputContent {
+                    float: left;
+
+                    input {
+                        vertical-align: middle;
+                        width: 60px;
+                        height: 30px;
+                        font-size: 14px;
+                        color: #666;
+                    }
+                }
+
+                // 数量增减按钮
+                .buttons {
+                    float: left;
+                    margin-left: 4px;
+                    padding-top: 2px;
+
+                    a {
+                        text-decoration: none;
+                        color: #666;
+                        display: block;
+                        width: 18px;
+                        height: 14px;
+                        position: relative;
+
+                        icon {
+                            display: inline-block;
+                            position: absolute;
+                        }
+
+                        // 增加
+                        .up {
+                            font-style: normal;
+                            width: 18px;
+                            height: 14px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -119px -106px;
+                        }
+
+                        .down {
+                            width: 18px;
+                            height: 14px;
+                            background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -86px -140px;
+                        }
+                    }
+                }
+            }
+
+            // 购买
+            .buys {
+                clear: both;
+                margin-top: 30px;
+
+                ul {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+
+                    li {
+                        list-style: none;
+                        display: inline-block;
+                        position: relative;
+
+                        a {
+                            display: inline-block;
+                            text-decoration: none;
+                            text-align: center;
+                            border: 1px solid #333;
+                            color: #333;
+                            width: 222px;
+                            height: 46px;
+                            line-height: 46px;
+                            font-size: 20px;
+                        }
+
+                        #addCart {
+                            color: #fff;
+                            background: #333;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+
+            // 分享
+            .share {
+                margin-top: 30px;
+                height: 20px;
+
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: #333;
+                    display: inline-block;
+                    height: 17px;
+                    line-height: 17px;
+                    vertical-align: middle;
+                    width: 44px;
+                    margin-right: 10px;
+
+                    span {
+                        color: #666;
+                        margin-top: 3px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 商品介绍
+    .title {
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        font-weight: 400;
+        height: 48px;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 1190px;
+        margin: 0 auto;
+        table-layout: fixed;
+        border-color: grey;
+
+        tr {
+            border-bottom: 1px solid #eee;
+
+            td {
+                height: 80.5px;
+            }
+        }
+
+    }
+
+    // 商品信息
+    #introduce {
+        width: 1190px;
+        margin: 0 auto;
+        height: 574px;
+        margin-top: 80px;
+
+        .intro_form {
+            height: 486px;
+            margin-top: 40px;
+
+            td {
+                width: 238px;
+            }
+        }
+    }
+
+    // 尺码信息
+    #size_info {
+        width: 1190px;
+        margin: 0 auto;
+        height: 257px;
+        margin-top: 80px;
+
+        .size_form {
+            width: 1190px;
+            height: 162px;
+            font-size: 12px;
+
+            td {
+                line-height: 80px;
+                text-align: left;
+            }
+        }
+    }
+
+    // 商品详情长图
+    #detail_info {
+        width: 1190px;
+        margin: 0 auto;
+
+        .imgs_list {
+            width: 790px;
+            margin: 0 auto;
+        }
+
+        // 底部banner图
+        .foot_banner {
+            width: 990px;
+            margin: 0 auto;
+        }
+    }
+
+    // 商品评价
+    #assess_info {
+        width: 1190px;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        .p1 {
+            height: 101px;
+            overflow: hidden;
+            padding-top: 20px;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                text-align: center;
+                border: 1px solid #333;
+                color: #fff;
+                background: #333;
+            }
+        }
+    }
+
+    // 猜你喜欢
+
+}
